@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block tartalom %}
+<h1>Üdvözlünk {{user.username}}💋💕</h1>
+<form action="{% url 'logout' %}" method="post">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-secondary m-3">Kijelentkezés</button>
+</form>
+{% endblock tartalom %}
